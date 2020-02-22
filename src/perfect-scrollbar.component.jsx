@@ -36,7 +36,7 @@ export default class ScrollBar extends React.PureComponent {
     onYReachEnd: PropTypes.func,
     onXReachStart: PropTypes.func,
     onXReachEnd: PropTypes.func,
-    component: PropTypes.string
+    component: PropTypes.string,
   };
 
   static defaultProps = {
@@ -53,7 +53,7 @@ export default class ScrollBar extends React.PureComponent {
     onYReachEnd: undefined,
     onXReachStart: undefined,
     onXReachEnd: undefined,
-    component: 'div'
+    component: 'div',
   }
 
   constructor(props) {
