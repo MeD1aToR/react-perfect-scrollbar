@@ -36,6 +36,7 @@ export default class ScrollBar extends React.PureComponent {
     onYReachEnd: PropTypes.func,
     onXReachStart: PropTypes.func,
     onXReachEnd: PropTypes.func,
+    component: PropTypes.string
   };
 
   static defaultProps = {
@@ -52,6 +53,7 @@ export default class ScrollBar extends React.PureComponent {
     onYReachEnd: undefined,
     onXReachStart: undefined,
     onXReachEnd: undefined,
+    component: 'div'
   }
 
   constructor(props) {
@@ -112,11 +114,12 @@ export default class ScrollBar extends React.PureComponent {
   }
 
   render() {
-    const { children, className } = this.props;
+    const { children, className, component } = this.props;
+    const Comp = component;
     return (
-      <div className={`oc-scrollbar-container ${className}`} ref={this.handleRef}>
+      <Comp className={`oc-scrollbar-container ${className}`} ref={this.handleRef}>
         {children}
-      </div>
+      </Comp>
     );
   }
 }
